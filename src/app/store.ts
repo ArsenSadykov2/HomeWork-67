@@ -7,3 +7,5 @@ export const store = configureStore({
         password: passwordReducer,
     },
 });
+
+export type RootState = ReturnType<typeof store.getState>;

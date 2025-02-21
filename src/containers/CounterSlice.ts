@@ -18,15 +18,15 @@ export const passwordSlice = createSlice({
     name: 'counter',
     initialState,
     reducers: {
-        addPassword: (state, action: PayloadAction) => {
+        addPassword: (state, action: PayloadAction<number>) => {
             if(Number(state.value.length) < 4) {
                 state.value += action.payload;
             }
         },
         checkPassword: (state,) => {
             if (state.value === rightPin) {
-                state.info = 'Pin Granted';
-                state.status = 'Granted';
+                state.info = 'Pin Correct';
+                state.status = 'Correct';
             } else {
                 state.info = 'Pin Denied';
                 state.status = 'Denied';
