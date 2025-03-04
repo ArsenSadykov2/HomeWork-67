@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addPassword, checkPassword, deletePassword } from "./CounterSlice.ts";
-import { RootState } from "../app/store.ts";
+import { RootState } from "../../app/store.ts";
 
-const Password = () => {
+const Counter = () => {
     const value = useSelector((state: RootState) => state.password.value);
     const status = useSelector((state: RootState) => state.password.status);
     const info = useSelector((state: RootState) => state.password.info);
@@ -63,4 +63,4 @@ const Password = () => {
     );
 };
 
-export default Password;
+export default Counter;
